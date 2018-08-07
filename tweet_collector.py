@@ -55,7 +55,7 @@ class TweetCollector(object):
         '''
         Grabs one batch of tweets from a user's timeline
         '''
-        tweets = self.api.user_timeline(id=user,  
+        tweets = self.api.user_timeline(user_id=user,  
                                         max_id=max_id, 
                                         since_id=since_id,
                                         count=count)
@@ -96,6 +96,6 @@ class TweetCollector(object):
         last = out[0]._json['created_at']
         first = out[-1]._json['created_at']
         self.logger.info(f"Got {n} tweets in {n_batches+1} batches.")
-        self.logger.info(f"Oldest tweet created at: {first}.")
-        self.logger.info(f"Latest tweet created at: {last}.")
+        self.logger.debug(f"Oldest tweet created at: {first}.")
+        self.logger.debug(f"Latest tweet created at: {last}.")
         return out

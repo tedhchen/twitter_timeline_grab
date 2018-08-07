@@ -1,11 +1,11 @@
 # Twitter timeline grab
 
+This code is a revision of the original forked from Fridolin Linder's github ([flinder](https://github.com/flinder)). It takes Twitter IDs instead of usernames.
+
 ## Usage
 
-Fill in your Twitter credentials, output file path and list of Twitter screen names in
-`collect.py`. [You can also pass user ids to the twitter collector, but then the 
-code checking data collected in the past has to be changed to extract the latest 
-tweet by user id not screen name]
+Fill in your Twitter credentials, output file path and list of Twitter user IDs in
+`collect.py`. 
 
 Run with: 
 
