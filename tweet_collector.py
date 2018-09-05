@@ -82,8 +82,8 @@ class TweetCollector(object):
         first_id = out[-1].id - 1
         n_batches = 0
 
-        if len(out) == batch_size:
-            while len(batch) > 0:
+        if len(out) > 0:
+            while (len(batch) > 0) and (n_batches < 16):
                 self.logger.debug(f'Retrieving additional batch. First id: '
                                   f'{first_id}')
                 batch = self._get_batch(user=user, max_id=first_id, 
@@ -96,6 +96,6 @@ class TweetCollector(object):
         last = out[0]._json['created_at']
         first = out[-1]._json['created_at']
         self.logger.info(f"Got {n} tweets in {n_batches+1} batches.")
-        self.logger.debug(f"Oldest tweet created at: {first}.")
-        self.logger.debug(f"Latest tweet created at: {last}.")
+        self.logger.info(f"Oldest tweet created at: {first}.")
+        self.logger.info(f"Latest tweet created at: {last}.")
         return out
