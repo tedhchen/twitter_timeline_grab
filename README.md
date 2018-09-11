@@ -1,6 +1,8 @@
 # Twitter timeline grab
 
-This code is a revision of the original forked from Fridolin Linder's github ([flinder](https://github.com/flinder)). It takes Twitter IDs instead of usernames.
+log_errorcheck.py runs through the log.txt file produced by collect.py and outputs Twitter accounts that encountered an error.
+
+collect.py and tweet_collector.py are revisions of the original forked from Fridolin Linder's github ([flinder](https://github.com/flinder)). It takes Twitter IDs instead of usernames.
 
 ## Usage
 
