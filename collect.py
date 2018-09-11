@@ -14,7 +14,7 @@ from tweet_collector import TweetCollector
 ## File to write collected data to / if you want to use a db connection to write
 ## to you have to change the code at the end of this script with your custom
 ## connection
-OUT_FILE = 'timelines.json'
+OUT_FILE = ''
 ## List of twitter IDs
 TWITTER_USERS = [] 
 TWITTER_CREDENTIALS = {"access_token": '', 
@@ -33,7 +33,7 @@ logger.setLevel(logging.INFO)
 logging.basicConfig(level=logging.INFO,
                     format='%(asctime)s %(name)-12s %(levelname)-8s %(message)s',
                     datefmt='%m-%d %H:%M',
-                    filename='log.txt',
+                    filename='',
                     filemode='a')
 
 # Data Collection
